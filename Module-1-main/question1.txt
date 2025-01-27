@@ -1,0 +1,14 @@
+#Create a file and add executable permission to all users (user, group and others)
+
+#to create a file 
+touch sample.txt
+
+#to edit the file content in editor
+nano sample.txt
+
+#to edit the executable permissions for all users
+chmod a+x sample.txt
+
+#to check permissions given to the file 
+ls -l sample.txt
+

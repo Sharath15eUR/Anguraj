@@ -1,0 +1,15 @@
+Create 3 files in a dir1 and re-direct the output of list command with sorted by timestamp
+of the files to a file
+
+#to create dir1 
+mkdir -p dir1
+cd dir1
+
+#to create 3 files n dir1
+touch f1.txt f2.txt.f3.txt
+
+#to lists files sorted by timestamp and redirects the output
+ls -lt dir1 >sorted_file.txt
+
+#to view the output
+cat sorted_file.txt

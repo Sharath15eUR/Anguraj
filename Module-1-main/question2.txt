@@ -1,0 +1,14 @@
+create a file and remove write permission for group user alone.
+
+#create a new file 
+touch anothersample.txt
+
+#to edit the content of file in editor
+nano anothersample.txt
+
+#to remove the write permission from group user alone
+chmod g-w anothersample.txt
+
+#to veify the permission
+ls -l anothersample.txt
+
