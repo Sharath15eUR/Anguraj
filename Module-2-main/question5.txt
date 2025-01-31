@@ -1,0 +1,7 @@
+#5) Use the networking tool command and print all the gateway available in a sorted manner
+
+#to see all networks in the system 
+netstat -rn 
+
+# to print all the gateways available in sorted manner
+netstat -rn | grep '^0.0.0.0' | awk '{print $2}' | sort

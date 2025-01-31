@@ -1,0 +1,7 @@
+#1) Use the appropriate command to list all files larger than 1 MB in the current directory and save the output to a file.
+
+#To list all files in the current directory 
+ls -l
+
+#To filter the size in column 5 with size more than 1MB = 1000000 bytes 
+ls -l | awk '$5+0>1000000 {print $9}'

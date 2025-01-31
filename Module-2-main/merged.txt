@@ -1,0 +1,40 @@
+#1) Use the appropriate command to list all files larger than 1 MB in the current directory and save the output to a file.
+
+#To list all files in the current directory 
+ls -l
+
+#To filter the size in column 5 with size more than 1MB = 1000000 bytes 
+ls -l | awk '$5+0>1000000 {print $9}'
+#2) Replace all occurrences of "localhost" with "127.0.0.1" in a configuration file named config.txt, and save the updated file as updated_config.txt.
+
+#to see the content of the file
+cat config.txt
+
+#to replace all occurrences of "localhost" with "127.0.0.1"
+sed 's/localhost/127.0.0.1/g' config.txt
+
+#3) Use the appropriate command to search for lines containing the word "ERROR" in a log file but exclude lines containing "DEBUG". Save the results to a file named filtered_log.txt.
+
+#to see the content of log file 
+cat sample_log.log
+
+#to filter the value with field seperator as ':' and ERROR in field 1
+awk -F: '$1~/ERROR/' sample_log.log >filtered_log.txt
+
+#to view the content of output file 
+cat filtered_log.txt
+#4) Write a code to identify the process with the highest memory usage and then terminate it.
+
+
+#to display the filtered processes consuming memory more than 0 and display the highest process
+ps aux | awk '$4>0 {print $0}' | sort -k4,4nr | head -n1
+
+#to terminate the highest memory consuming process 
+ps aux | awk '$4>0 {print $0}' | sort -k4,4nr | head -n1 | awk '{print $2}' | xargs kill -9
+#5) Use the networking tool command and print all the gateway available in a sorted manner
+
+#to see all networks in the system 
+netstat -rn 
+
+# to print all the gateways available in sorted manner
+netstat -rn | grep '^0.0.0.0' | awk '{print $2}' | sort

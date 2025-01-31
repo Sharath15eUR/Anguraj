@@ -1,0 +1,8 @@
+#4) Write a code to identify the process with the highest memory usage and then terminate it.
+
+
+#to display the filtered processes consuming memory more than 0 and display the highest process
+ps aux | awk '$4>0 {print $0}' | sort -k4,4nr | head -n1
+
+#to terminate the highest memory consuming process 
+ps aux | awk '$4>0 {print $0}' | sort -k4,4nr | head -n1 | awk '{print $2}' | xargs kill -9

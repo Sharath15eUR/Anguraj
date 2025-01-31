@@ -1,0 +1,10 @@
+#3) Use the appropriate command to search for lines containing the word "ERROR" in a log file but exclude lines containing "DEBUG". Save the results to a file named filtered_log.txt.
+
+#to see the content of log file 
+cat sample_log.log
+
+#to filter the value with field seperator as ':' and ERROR in field 1
+awk -F: '$1~/ERROR/' sample_log.log >filtered_log.txt
+
+#to view the content of output file 
+cat filtered_log.txt
