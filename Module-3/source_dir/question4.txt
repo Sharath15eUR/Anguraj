@@ -1,0 +1,235 @@
+Use ps command with options to display all active process running on the system
+
+#to see active processes in whole system in descending order based on memory  
+ps aux --sort=-%mem
+
+#results in terminals
+anguraj@anguraj-Virtual-Machine:~/linux-training/Module1$ ps aux --sort=-%mem
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+anguraj     2118  6.4 13.0 12222628 582772 ?     Sl   09:14   8:18 /snap/firefox/4793/usr/lib/
+anguraj     3332  1.3  7.9 2825464 353200 ?      Sl   09:18   1:41 /snap/firefox/4793/usr/lib/
+anguraj     1388  5.6  5.7 4823208 257876 ?      Ssl  09:14   7:21 /usr/bin/gnome-shell
+anguraj    10433  1.5  5.5 2744940 247352 ?      Sl   09:35   1:43 /snap/firefox/4793/usr/lib/
+anguraj    12452  0.1  5.0 2602068 223268 ?      Sl   09:59   0:07 /snap/firefox/4793/usr/lib/
+anguraj    10070  0.7  4.9 2699868 219592 ?      Sl   09:30   0:51 /snap/firefox/4793/usr/lib/
+anguraj     2424  0.2  3.8 2527012 170928 ?      Sl   09:14   0:21 /snap/firefox/4793/usr/lib/
+anguraj    12512  0.0  3.3 2535292 147116 ?      Sl   10:00   0:03 /snap/firefox/4793/usr/lib/
+anguraj     6862  0.0  3.2 977412 145788 ?       SNl  09:27   0:04 /usr/bin/python3 /usr/bin/u
+anguraj    10041  0.2  3.2 2640424 144724 ?      Sl   09:30   0:15 /snap/firefox/4793/usr/lib/
+root        3686  0.0  2.7 598780 120348 ?       Ssl  09:19   0:01 /usr/libexec/fwupd/fwupd
+root        1087  2.7  2.4 359556 111128 tty2    Sl+  09:13   3:33 /usr/lib/xorg/Xorg vt2 -dis
+anguraj     4249  0.0  2.1 435844 97040 ?        Sl   09:19   0:00 /snap/firefox/4793/usr/lib/
+anguraj     1441  0.0  1.9 1482724 87616 ?       Sl   09:14   0:01 /usr/libexec/mutter-x11-fra
+anguraj     1925  0.0  1.9 1769628 86952 ?       Ssl  09:14   0:00 /usr/libexec/xdg-desktop-po
+anguraj     2397  0.0  1.7 2430148 79052 ?       Sl   09:14   0:02 /snap/firefox/4793/usr/lib/
+anguraj    14007  0.0  1.6 2391504 74112 ?       Sl   10:48   0:00 /snap/firefox/4793/usr/lib/
+anguraj    14001  0.0  1.6 2391508 73600 ?       Sl   10:48   0:00 /snap/firefox/4793/usr/lib/
+anguraj    12515  0.0  1.6 2391504 73472 ?       Sl   10:00   0:00 /snap/firefox/4793/usr/lib/
+anguraj     5846  0.3  1.3 859716 60980 ?        Ssl  09:22   0:25 /usr/libexec/gnome-terminal
+anguraj     1897  0.0  1.2 3087416 54708 ?       Sl   09:14   0:01 gjs /usr/share/gnome-shell/
+anguraj     1569  0.0  1.1 820696 52736 ?        Sl   09:14   0:00 /usr/libexec/evolution-data
+anguraj     5749  0.0  1.1 1210136 50880 ?       Sl   09:20   0:00 /snap/snapd-desktop-integra
+anguraj     2946  0.0  1.1 344408 49792 ?        Sl   09:14   0:00 /snap/firefox/4793/usr/lib/
+anguraj     1528  0.0  0.9 1206588 42624 ?       Ssl  09:14   0:00 /usr/libexec/evolution-sour
+anguraj     2345  0.0  0.7 208020 33152 ?        Sl   09:14   0:00 /snap/firefox/4793/usr/lib/
+anguraj     3073  0.0  0.7 501260 31616 ?        Sl   09:15   0:00 /usr/bin/update-notifier
+anguraj     1545  0.0  0.6 605256 28580 ?        Ssl  09:14   0:00 /usr/libexec/gsd-media-keys
+anguraj     1951  0.0  0.6 834084 27648 ?        Ssl  09:14   0:00 /usr/libexec/evolution-addr
+anguraj     1547  0.0  0.5 534656 26648 ?        Ssl  09:14   0:00 /usr/libexec/gsd-power
+root        3828  0.1  0.5 1690612 25872 ?       Ssl  09:19   0:10 /usr/lib/snapd/snapd
+anguraj     1806  0.0  0.5 891528 25416 ?        SNsl 09:14   0:00 /usr/libexec/tracker-miner-
+anguraj     1031  0.0  0.5 140268 25304 ?        S<Lsl 09:13   0:01 /usr/bin/pipewire-pulse
+anguraj     1560  0.0  0.5 425148 25112 ?        Ssl  09:14   0:00 /usr/libexec/gsd-xsettings
+anguraj     1706  0.0  0.5 356440 24420 ?        Sl   09:14   0:03 /usr/libexec/ibus-extension
+anguraj     2012  0.0  0.5 424040 23784 ?        Ssl  09:14   0:00 /usr/libexec/xdg-desktop-po
+anguraj     1880  0.0  0.5 1374664 22912 ?       Ssl  09:14   0:00 /usr/libexec/evolution-cale
+anguraj     1559  0.0  0.5 423624 22860 ?        Ssl  09:14   0:00 /usr/libexec/gsd-wacom
+anguraj     1539  0.0  0.5 424096 22820 ?        Ssl  09:14   0:00 /usr/libexec/gsd-color
+anguraj     1544  0.0  0.4 496676 22228 ?        Ssl  09:14   0:00 /usr/libexec/gsd-keyboard
+anguraj     1800  0.0  0.4 2605816 22128 ?       Sl   09:14   0:00 /usr/bin/gjs -m /usr/share/
+anguraj     1496  0.0  0.4 2540296 22068 ?       Sl   09:14   0:00 /usr/bin/gjs -m /usr/share/
+anguraj     1766  0.0  0.4 555316 20352 ?        Sl   09:14   0:00 /usr/libexec/goa-daemon
+anguraj     1716  0.0  0.4 275760 19124 ?        Sl   09:14   0:00 /usr/libexec/ibus-x11 --kil
+root         786  0.0  0.4 345064 18252 ?        Ssl  09:13   0:00 /usr/sbin/NetworkManager --
+cups-br+     986  0.0  0.4 268392 18176 ?        Ssl  09:13   0:00 /usr/sbin/cups-browsed
+anguraj     1353  0.0  0.3 602856 16896 ?        Ssl  09:14   0:00 /usr/libexec/gnome-session-
+root         961  0.0  0.3 120908 15744 ?        Ssl  09:13   0:00 /usr/bin/python3 /usr/share
+root         267  0.0  0.3  67476 15240 ?        S<s  09:13   0:00 /usr/lib/systemd/systemd-jo
+anguraj     1030  0.0  0.3 413996 15104 ?        S<sl 09:13   0:00 /usr/bin/wireplumber
+anguraj     1487  0.0  0.3 654700 15104 ?        Sl   09:14   0:00 /usr/libexec/gnome-shell-ca
+gnome-r+     641  0.0  0.3 365340 15072 ?        Ssl  09:13   0:00 /usr/libexec/gnome-remote-d
+anguraj     1161  0.0  0.3 306876 14720 tty2     Sl+  09:13   0:00 /usr/libexec/gnome-session-
+anguraj     1026  0.0  0.3 125736 14684 ?        S<sl 09:13   0:00 /usr/bin/pipewire
+anguraj     1668  0.0  0.3 424872 14208 ?        Sl   09:14   0:00 /usr/libexec/gsd-printer
+colord      1462  0.0  0.3 328728 13864 ?        Ssl  09:14   0:00 /usr/libexec/colord
+root           1  0.0  0.3  23216 13628 ?        Ss   09:13   0:05 /sbin/init splash
+anguraj     1920  0.0  0.3 562812 13424 ?        Ssl  09:14   0:00 /usr/libexec/xdg-desktop-po
+anguraj     1017  0.0  0.2  21720 12672 ?        Ss   09:13   0:02 /usr/lib/systemd/systemd --
+root         680  0.0  0.2 469236 11832 ?        Ssl  09:13   0:00 /usr/libexec/udisks2/udisks
+systemd+     585  0.0  0.2  22080 11776 ?        Ss   09:13   0:01 /usr/lib/systemd/systemd-re
+polkitd      658  0.0  0.2 325432 11224 ?        Ssl  09:13   0:00 /usr/lib/polkit-1/polkitd -
+root         958  0.0  0.2  46908 11008 ?        Ss   09:13   0:00 /usr/sbin/cupsd -l
+anguraj     1540  0.0  0.2 440332 11008 ?        Ssl  09:14   0:00 /usr/libexec/gsd-datetime
+root         809  0.0  0.2 318356 10464 ?        Ssl  09:13   0:00 /usr/sbin/ModemManager
+anguraj     1553  0.0  0.2 332312 10368 ?        Ssl  09:14   0:00 /usr/libexec/gsd-print-noti
+anguraj     2462  0.0  0.2 1909856 10212 ?       Sl   09:14   0:00 /usr/bin/snap userd
+root        1009  0.0  0.2 250928  9984 ?        Sl   09:13   0:00 gdm-session-worker [pam/gdm
+anguraj     9678  0.0  0.2 116048  9856 ?        Sl   09:30   0:00 /usr/lib/speech-dispatcher-
+anguraj     1705  0.0  0.2 397980  9344 ?        Ssl  09:14   0:00 /usr/libexec/gvfs-udisks2-v
+anguraj     9573  0.0  0.2 128684  9224 ?        Ssl  09:30   0:00 /usr/bin/speech-dispatcher 
+anguraj     1556  0.0  0.2 551860  9216 ?        Ssl  09:14   0:00 /usr/libexec/gsd-sharing
+anguraj     1558  0.0  0.2 402300  9216 ?        Ssl  09:14   0:00 /usr/libexec/gsd-sound
+anguraj     1032  0.0  0.2 325152  9088 ?        Ssl  09:13   0:00 /usr/bin/gnome-keyring-daem
+root         679  0.0  0.1  18048  8884 ?        Ss   09:13   0:00 /usr/lib/systemd/systemd-lo
+anguraj     1532  0.1  0.1 471264  8748 ?        Ssl  09:14   0:12 /usr/bin/ibus-daemon --pane
+anguraj     1869  0.0  0.1 618112  8576 ?        Sl   09:14   0:00 /usr/libexec/gvfsd-trash --
+root         976  0.0  0.1 323448  8320 ?        Ssl  09:13   0:00 /usr/sbin/gdm3
+anguraj     1778  0.0  0.1 397796  8064 ?        Sl   09:14   0:00 /usr/libexec/goa-identity-s
+anguraj    10825  0.0  0.1 396900  8064 ?        Sl   09:38   0:00 /usr/libexec/gvfsd-recent -
+root        1502  0.0  0.1 325084  7936 ?        Ssl  09:14   0:00 /usr/libexec/upowerd
+anguraj     5519  0.0  0.1  39128  7808 ?        Ss   09:20   0:00 /snap/snapd-desktop-integra
+anguraj     1457  0.0  0.1 236044  7680 ?        Sl   09:14   0:01 /usr/libexec/at-spi2-regist
+root         675  0.0  0.1 321960  7624 ?        Ssl  09:13   0:00 /usr/libexec/accounts-daemo
+anguraj     1245  0.0  0.1 382936  7552 ?        Ssl  09:13   0:00 /usr/libexec/at-spi-bus-lau
+anguraj     1336  0.0  0.1 322948  7552 ?        Ssl  09:14   0:00 /usr/libexec/gvfsd
+anguraj     1541  0.0  0.1 393804  7296 ?        Ssl  09:14   0:00 /usr/libexec/gsd-housekeepi
+anguraj     1812  0.0  0.1 245440  7168 ?        Sl   09:14   0:03 /usr/libexec/ibus-engine-si
+anguraj     1055  0.0  0.1 545228  7040 ?        Ssl  09:13   0:00 /usr/libexec/xdg-document-p
+anguraj     1557  0.0  0.1 468216  7040 ?        Ssl  09:14   0:00 /usr/libexec/gsd-smartcard
+root         317  0.0  0.1  30428  7004 ?        Ss   09:13   0:01 /usr/lib/systemd/systemd-ud
+systemd+     584  0.0  0.1  17556  6912 ?        Ss   09:13   0:01 /usr/lib/systemd/systemd-oo
+systemd+     587  0.0  0.1  91044  6912 ?        Ssl  09:13   0:00 /usr/lib/systemd/systemd-ti
+root         659  0.0  0.1 322044  6912 ?        Ssl  09:13   0:00 /usr/libexec/power-profiles
+message+     637  0.0  0.1  12092  6784 ?        Ss   09:13   0:01 @dbus-daemon --system --add
+anguraj     1579  0.0  0.1 305624  6784 ?        Sl   09:14   0:00 /usr/libexec/gsd-disk-utili
+anguraj     1724  0.0  0.1 319096  6784 ?        Sl   09:14   0:00 /usr/libexec/ibus-portal
+anguraj     1780  0.0  0.1 398044  6784 ?        Ssl  09:14   0:00 /usr/libexec/gvfs-afc-volum
+anguraj     1704  0.0  0.1 319132  6656 ?        Sl   09:14   0:00 /usr/libexec/ibus-dconf
+anguraj     1350  0.0  0.1 468380  6528 ?        Sl   09:14   0:00 /usr/libexec/gvfsd-fuse /ru
+anguraj     1717  0.0  0.1 319432  6528 ?        Ssl  09:14   0:00 /usr/libexec/gvfs-gphoto2-v
+anguraj     1928  0.0  0.1 245008  6528 ?        Ssl  09:14   0:00 /usr/libexec/gvfsd-metadata
+anguraj     1755  0.0  0.1 318464  6400 ?        Ssl  09:14   0:00 /usr/libexec/gvfs-mtp-volum
+root         677  0.0  0.1 318260  6272 ?        Ssl  09:13   0:00 /usr/libexec/switcheroo-con
+anguraj     1327  0.0  0.1 162652  6272 ?        Ssl  09:14   0:00 /usr/libexec/gcr-ssh-agent 
+anguraj     1536  0.0  0.1 392184  6272 ?        Ssl  09:14   0:00 /usr/libexec/gsd-a11y-setti
+anguraj     1554  0.0  0.1 539752  6272 ?        Ssl  09:14   0:00 /usr/libexec/gsd-rfkill
+anguraj     1049  0.0  0.1  10708  6144 ?        Ss   09:13   0:01 /usr/bin/dbus-daemon --sess
+anguraj     1761  0.0  0.1 318440  6144 ?        Ssl  09:14   0:00 /usr/libexec/gvfs-goa-volum
+anguraj     9681  0.0  0.1 162692  6144 ?        Sl   09:30   0:00 /usr/lib/speech-dispatcher-
+anguraj     1555  0.0  0.1 318228  6016 ?        Ssl  09:14   0:00 /usr/libexec/gsd-screensave
+anguraj     1066  0.0  0.1 317976  5888 ?        Ssl  09:13   0:00 /usr/libexec/xdg-permission
+syslog       685  0.0  0.1 222564  5760 ?        Ssl  09:13   0:00 /usr/sbin/rsyslogd -n -iNON
+anguraj     1080  0.0  0.1 244380  5632 tty2     Ssl+ 09:13   0:00 /usr/libexec/gdm-x-session 
+anguraj     1844  0.0  0.1 230228  5504 ?        Ssl  09:14   0:00 /usr/libexec/dconf-service
+anguraj    12934  0.0  0.1  19932  5376 pts/0    Ss   10:13   0:00 bash
+anguraj     1328  0.0  0.1 100216  5248 ?        Ssl  09:14   0:00 /usr/libexec/gnome-session-
+anguraj    10875  0.0  0.1  19932  5248 pts/1    Ss+  09:39   0:00 bash
+anguraj     1027  0.0  0.1 106404  5120 ?        Ssl  09:13   0:00 /usr/bin/pipewire -c filter
+anguraj     1252  0.0  0.1   9608  4864 ?        S    09:13   0:00 /usr/bin/dbus-daemon --conf
+anguraj    14840  0.0  0.1  22416  4736 pts/0    R+   11:23   0:00 ps aux --sort=-%mem
+root         787  0.0  0.1  17376  4480 ?        Ss   09:13   0:00 /usr/sbin/wpa_supplicant -u
+www-data    8726  0.0  0.0 1999384 4232 ?        Sl   09:29   0:00 /usr/sbin/apache2 -k start
+www-data    8727  0.0  0.0 1999384 4232 ?        Sl   09:29   0:00 /usr/sbin/apache2 -k start
+avahi        636  0.0  0.0   8668  4224 ?        Ss   09:13   0:00 avahi-daemon: running [angu
+root        8724  0.0  0.0   6820  3580 ?        Ss   09:29   0:00 /usr/sbin/apache2 -k start
+anguraj     1018  0.0  0.0  21456  3212 ?        S    09:13   0:00 (sd-pam)
+rtkit       1056  0.0  0.0  22940  3200 ?        SNsl 09:13   0:00 /usr/libexec/rtkit-daemon
+root         676  0.0  0.0  18092  2816 ?        Ss   09:13   0:00 /usr/sbin/cron -f -P
+root        3786  0.0  0.0  92648  2696 ?        Ss   09:19   0:00 gpg-agent --homedir /var/li
+anguraj     9684  0.0  0.0   5668  2560 ?        S    09:30   0:00 /usr/lib/speech-dispatcher-
+kernoops     992  0.0  0.0  12744  2060 ?        Ss   09:13   0:00 /usr/sbin/kerneloops
+kernoops     989  0.0  0.0  12744  2052 ?        Ss   09:13   0:00 /usr/sbin/kerneloops --test
+root        1075  0.0  0.0   2704  1792 ?        Ss   09:13   0:00 fusermount3 -o rw,nosuid,no
+www-data    8921  0.0  0.0   3616  1416 ?        Ss   09:29   0:00 /usr/bin/htcacheclean -d 12
+avahi        691  0.0  0.0   8476  1160 ?        S    09:13   0:00 avahi-daemon: chroot helper
+root           2  0.0  0.0      0     0 ?        S    09:13   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        S    09:13   0:00 [pool_workqueue_release]
+root           4  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/R-rcu_g]
+root           5  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/R-rcu_p]
+root           6  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/R-slub_]
+root           7  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/R-netns]
+root           9  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/0:0H-events_highpr
+root          12  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/R-mm_pe]
+root          13  0.0  0.0      0     0 ?        I    09:13   0:00 [rcu_tasks_kthread]
+root          14  0.0  0.0      0     0 ?        I    09:13   0:00 [rcu_tasks_rude_kthread]
+root          15  0.0  0.0      0     0 ?        I    09:13   0:00 [rcu_tasks_trace_kthread]
+root          16  0.0  0.0      0     0 ?        S    09:13   0:00 [ksoftirqd/0]
+root          17  0.0  0.0      0     0 ?        I    09:13   0:01 [rcu_preempt]
+root          18  0.0  0.0      0     0 ?        S    09:13   0:00 [migration/0]
+root          19  0.0  0.0      0     0 ?        S    09:13   0:00 [idle_inject/0]
+root          20  0.0  0.0      0     0 ?        S    09:13   0:00 [cpuhp/0]
+root          21  0.0  0.0      0     0 ?        S    09:13   0:00 [cpuhp/2]
+root          22  0.0  0.0      0     0 ?        S    09:13   0:00 [idle_inject/2]
+root          23  0.0  0.0      0     0 ?        S    09:13   0:00 [migration/2]
+root          24  0.0  0.0      0     0 ?        S    09:13   0:00 [ksoftirqd/2]
+root          26  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/2:0H-events_highpr
+root          27  0.0  0.0      0     0 ?        S    09:13   0:00 [cpuhp/1]
+root          28  0.0  0.0      0     0 ?        S    09:13   0:00 [idle_inject/1]
+root          29  0.0  0.0      0     0 ?        S    09:13   0:00 [migration/1]
+root          30  0.0  0.0      0     0 ?        S    09:13   0:00 [ksoftirqd/1]
+root          32  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/1:0H-events_highpr
+root          33  0.0  0.0      0     0 ?        S    09:13   0:00 [cpuhp/3]
+root          34  0.0  0.0      0     0 ?        S    09:13   0:00 [idle_inject/3]
+root          35  0.0  0.0      0     0 ?        S    09:13   0:00 [migration/3]
+root          36  0.0  0.0      0     0 ?        S    09:13   0:00 [ksoftirqd/3]
+root          38  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/3:0H-events_highpr
+root          39  0.0  0.0      0     0 ?        S    09:13   0:00 [kdevtmpfs]
+root          40  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/R-inet_]
+root          42  0.0  0.0      0     0 ?        S    09:13   0:00 [kauditd]
+root          43  0.0  0.0      0     0 ?        S    09:13   0:00 [khungtaskd]
+root          44  0.0  0.0      0     0 ?        S    09:13   0:00 [oom_reaper]
+root          46  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/R-write]
+root          47  0.0  0.0      0     0 ?        S    09:13   0:02 [kcompactd0]
+root          48  0.0  0.0      0     0 ?        SN   09:13   0:00 [ksmd]
+root          49  0.0  0.0      0     0 ?        SN   09:13   0:00 [khugepaged]
+root          50  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/R-kinte]
+root          51  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/R-kbloc]
+root          52  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/R-blkcg]
+root          53  0.0  0.0      0     0 ?        S    09:13   0:00 [irq/9-acpi]
+root          57  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/R-tpm_d]
+root          58  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/R-ata_s]
+root          59  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/R-md]
+root          60  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/R-md_bi]
+root          61  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/R-edac-]
+root          62  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/R-devfr]
+root          63  0.0  0.0      0     0 ?        S    09:13   0:00 [watchdogd]
+root          64  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/3:1H-kblockd]
+root          65  0.0  0.0      0     0 ?        S    09:13   0:01 [kswapd0]
+root          66  0.0  0.0      0     0 ?        S    09:13   0:00 [ecryptfs-kthread]
+root          67  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/R-kthro]
+root          68  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/R-acpi_]
+root          69  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/R-mld]
+root          70  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/R-ipv6_]
+root          77  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/R-kstrp]
+root          79  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/u9:0]
+root          92  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/R-charg]
+root         115  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/1:1H-kblockd]
+root         134  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/2:1H-kblockd]
+root         136  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/0:1H-kblockd]
+root         138  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/R-hv_vm]
+root         139  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/R-hv_vm]
+root         140  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/R-hv_pr]
+root         142  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/R-hv_su]
+root         175  0.0  0.0      0     0 ?        S    09:13   0:00 [scsi_eh_0]
+root         176  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/R-scsi_]
+root         216  0.0  0.0      0     0 ?        S    09:13   0:01 [jbd2/sda2-8]
+root         217  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/R-ext4-]
+root         337  0.0  0.0      0     0 ?        S    09:13   0:00 [psimon]
+root         371  0.0  0.0      0     0 ?        S    09:13   0:00 [hv_balloon]
+root         375  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/R-crypt]
+root        6374  0.0  0.0      0     0 ?        I    09:25   0:05 [kworker/0:1-events]
+root        9183  0.0  0.0      0     0 ?        S    09:29   0:00 [psimon]
+anguraj     9651  0.0  0.0      0     0 ?        Z    09:30   0:00 [sd_espeak-ng-mb] <defunct>
+root       13109  0.0  0.0      0     0 ?        I    10:20   0:01 [kworker/1:3-events]
+root       13988  0.0  0.0      0     0 ?        I    10:48   0:00 [kworker/2:0-events]
+root       13991  0.0  0.0      0     0 ?        I    10:48   0:00 [kworker/u8:2-events_unboun
+root       14077  0.0  0.0      0     0 ?        I    10:48   0:00 [kworker/3:1-cgroup_destroy
+root       14387  0.0  0.0      0     0 ?        I    11:02   0:00 [kworker/2:2-cgroup_destroy
+root       14427  0.0  0.0      0     0 ?        I    11:03   0:00 [kworker/3:2-mm_percpu_wq]
+root       14577  0.0  0.0      0     0 ?        I    11:10   0:00 [kworker/1:2]
+root       14582  0.0  0.0      0     0 ?        I    11:10   0:00 [kworker/u8:0-events_power_
+root       14680  0.0  0.0      0     0 ?        I    11:15   0:00 [kworker/0:0-events]
+root       14742  0.0  0.0      0     0 ?        I    11:18   0:00 [kworker/3:0]
+root       14744  0.0  0.0      0     0 ?        I    11:18   0:00 [kworker/u8:1-events_unboun
+root       14788  0.0  0.0      0     0 ?        I    11:20   0:00 [kworker/2:1]
+root       14817  0.0  0.0      0     0 ?        I    11:22   0:00 [kworker/0:2-events]
