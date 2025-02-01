@@ -4,8 +4,8 @@
 
 ### Scenario: Automating file backup and Reporting to the system. Create a shell script called "backup_manager.sh" that performs the following tasks incorporating the concepts suggested.
 
-##Requirements:
-###1. Command-line Arguments and Quoting:
+## Requirements:
+### 1. Command-line Arguments and Quoting:
 ###The script must accept three arguments: Source directory: A directory containing files to back up. Backup directory: The destination where files will be backed up. File extension: A specific file extension to filter (e.g., .txt).
 ###Example:  ./backup_manager.sh "/home/user/source" "/backup" ".txt"
 
