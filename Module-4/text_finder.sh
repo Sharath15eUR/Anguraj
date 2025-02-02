@@ -21,12 +21,24 @@ output_file="output.txt"
 # Clear the output file if it exists, or create a new one
 > "$output_file"
 
-#filter the lines with search words
-grep -w "frame.time\|wlan.fc.type\|wlan.fc.subtype" $input_file > $output_file
+# Filter the lines with search words and save to output file
+grep -w "frame.time\|wlan.fc.type\|wlan.fc.subtype" "$input_file" > "$output_file"
 
-#to have feedback of number of lines found
-line_count= grep -c "frame.time\|wlan.fc.type\|wlan.fc.subtype" $input_file 
+# Count the number of matching lines
+line_count=$(grep -c -w "frame.time\|wlan.fc.type\|wlan.fc.subtype" "$input_file")
 
+# Count the total number of lines in the input file
+total_lines=$(wc -l < "$input_file")
+
+# Print results to the terminal
 echo "$line_count lines found"
 echo "Output saved to $output_file"
+echo "Total number of lines in input file: $total_lines"
+
+# Save results to output file
+{
+    echo "Total number of lines in input file: $total_lines"
+    echo "$line_count lines matched"
+    echo "Output saved to $output_file"
+} >> "$output_file"
 

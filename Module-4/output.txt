@@ -9673,3 +9673,6 @@
           "frame.time": "Dec 31, 2024 12:51:11.972323000 India Standard Time",
             "wlan.fc.type": "0",
             "wlan.fc.subtype": "8",
+Total number of lines in input file: 3217725
+9675 lines matched
+Output saved to output.txt
