@@ -268,14 +268,14 @@ New-NetFirewallRule -DisplayName "Allow Telnet" -Direction Inbound -Protocol TCP
 ```powershell
 ipconfig
 ```
-![](./screenshots/telnet_client.jpeg)
+![](./screenshots/telnet_client.png)
 
 #### **3.2 Connect via Telnet**
 ```powershell
 telnet <server_ip>
 ```
 
-![](./screenshots/telnet_server.png)
+![](./screenshots/telnet_server.jpeg)
 
 
 ---
