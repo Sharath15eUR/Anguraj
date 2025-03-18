@@ -207,4 +207,76 @@ Displays:
 
 This process ensures efficient and conflict-free IP assignment in a network.
 
+---
+## QUESTION NO: 11
+### Using a terminal, connect to a remote machine via SSH and telnet.
+## **Enable Telnet in Windows (Client & Server)**
+
+### **1. Enable Telnet Client (On the Client Machine)**
+```powershell
+# Open PowerShell as Administrator and run:
+dism /online /Enable-Feature /FeatureName:TelnetClient
+
+# Verify installation
+telnet
+```
+
+### **2. Set Up a Telnet Server (Using Python as remote machine is not available)**
+#### **2.1 Save the Following Script as `telnet_server.py`**
+```python
+import socketserver, os
+
+HOST, PORT = "0.0.0.0", 23
+SHARED_FOLDER = os.path.dirname(os.path.abspath(__file__))
+
+class TelnetHandler(socketserver.StreamRequestHandler):
+    def handle(self):
+        self.wfile.write(b"Welcome to Telnet Server!\nCommands: LIST, GET <filename>, EXIT\n")
+        while True:
+            self.wfile.write(b"telnet> ")
+            command = self.rfile.readline().strip().decode()
+            if command.upper() == "LIST":
+                self.wfile.write("\n".join(os.listdir(SHARED_FOLDER)).encode() + b"\n")
+            elif command.upper().startswith("GET "):
+                filename = command[4:].strip()
+                filepath = os.path.join(SHARED_FOLDER, filename)
+                if os.path.isfile(filepath):
+                    with open(filepath, "rb") as f:
+                        self.wfile.write(f.read() + b"\n")
+                else:
+                    self.wfile.write(b"File not found.\n")
+            elif command.upper() == "EXIT":
+                break
+
+with socketserver.TCPServer((HOST, PORT), TelnetHandler) as server:
+    print(f"Telnet Server Running on {HOST}:{PORT}")
+    server.serve_forever()
+```
+
+#### **2.2 Run the Server**
+```powershell
+python telnet_server.py
+```
+
+#### **2.3 Allow Port 23 in Firewall**
+```powershell
+New-NetFirewallRule -DisplayName "Allow Telnet" -Direction Inbound -Protocol TCP -LocalPort 23 -Action Allow
+```
+
+### **3. Connect from Another Machine (Client)**
+#### **3.1 Find Server IP**
+```powershell
+ipconfig
+```
+![](./screenshots/telnet_client.jpeg)
+
+#### **3.2 Connect via Telnet**
+```powershell
+telnet <server_ip>
+```
+
+![](./screenshots/telnet_server.png)
+
+
+---
 
