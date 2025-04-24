@@ -183,9 +183,9 @@ Device used: Smartphone
 
 > **Note:** Device was configured to auto-connect and had the same IP & MAC addresses in both configurations. Performance difference is mainly due to the frequency band characteristics.
 #### Output:
-![Output Image](screenshots/7_1.jpg)
+![Output Image](screenshots/7_1.jpeg)
 
-![Output Image](screenshots/7_2.jpg)
+![Output Image](screenshots/7_2.jpeg)
 
 ---
 
