@@ -164,7 +164,28 @@ Both **802.1x** and **802.11b** are IEEE standards, but they serve different pur
 
 ---
 
-## Question 7 : Configure your modem/hotspot to operate only in 2.4Ghz and connect your laptop/ Wi-Fi device, and capture the capability/properties in your Wi-Fi device. Repeat the same in 5Ghz and tabulate all the differences you observed during this\
+## Question 7 : Configure your modem/hotspot to operate only in 2.4Ghz and connect your laptop/ Wi-Fi device, and capture the capability/properties in your Wi-Fi device. Repeat the same in 5Ghz and tabulate all the differences you observed during this
+
+# Wi-Fi Band Comparison: 2.4 GHz vs 5 GHz
+
+Captured on Wi-Fi network: **Anguraj**  
+Device used: Smartphone  
+
+| **Parameter**         | **2.4 GHz (Image 2 - 10:58)** | **5 GHz (Image 1 - 10:59)**   | **Remarks** |
+|-----------------------|-------------------------------|-------------------------------|-------------|
+| **Signal Strength**   | -30 dB (Excellent)            | -40 dB (Excellent)            | 2.4 GHz usually penetrates walls better, hence stronger signal. |
+| **Link Speed**        | 130 Mbps                      | 390 Mbps                      | 5 GHz offers higher speeds but shorter range. |
+| **MAC Address**       | aa:f9:64:54:32:60 (Random)    | aa:f9:64:54:32:60 (Random)    | Same MAC (randomized). |
+| **IPv4 Address**      | 192.168.137.213               | 192.168.137.213               | Same; indicates no change in DHCP lease or interface. |
+| **Security**          | WPA/WPA2-Personal             | WPA/WPA2-Personal             | Same encryption protocol. |
+
+---
+
+> **Note:** Device was configured to auto-connect and had the same IP & MAC addresses in both configurations. Performance difference is mainly due to the frequency band characteristics.
+#### Output:
+![Output Image](screenshots/7_1.jpg)
+
+![Output Image](screenshots/7_2.jpg)
 
 ---
 
